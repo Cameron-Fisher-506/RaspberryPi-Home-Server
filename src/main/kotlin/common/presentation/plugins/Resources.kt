@@ -1,4 +1,4 @@
-package za.co.raspberrypi.plugins
+package common.presentation.plugins
 
 import io.ktor.server.resources.*
 import io.ktor.server.application.Application

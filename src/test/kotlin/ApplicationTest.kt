@@ -3,6 +3,7 @@ package za.co.raspberrypi
 import io.ktor.client.request.*
 import io.ktor.http.*
 import io.ktor.server.testing.*
+import za.co.raspberrypi.common.presentation.server.module
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
