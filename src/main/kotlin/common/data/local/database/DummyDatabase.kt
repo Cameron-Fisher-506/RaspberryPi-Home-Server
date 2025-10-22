@@ -1,4 +1,4 @@
-package features.folderManagement.data.local.database
+package common.data.local.database
 
 import features.folderManagement.data.local.model.FolderEntity
 import java.util.Date
@@ -14,7 +14,7 @@ object DummyDatabase {
                 FolderEntity(1, "Photos", null, Date().time.toString()),
                 FolderEntity(2, "Projects", null, Date().time.toString()),
 
-                FolderEntity(3, "Vacation 2023", 1, Date().time.toString()),
+                FolderEntity(3, "Vacation", 1, Date().time.toString()),
                 FolderEntity(4, "Work", 1, Date().time.toString()),
 
                 FolderEntity(5, "Invoices", 0, Date().time.toString())

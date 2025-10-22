@@ -8,7 +8,6 @@ object FolderMapper {
         return Folder(
             id = folderEntity.id,
             name = folderEntity.name,
-            itemType = folderEntity.itemType,
             parentId = folderEntity.parentId,
             createAt = folderEntity.createAt
         )
@@ -18,7 +17,6 @@ object FolderMapper {
         return FolderEntity(
             id = folder.id,
             name = folder.name,
-            itemType = folder.itemType,
             parentId = folder.parentId,
             createAt = folder.createAt
         )
