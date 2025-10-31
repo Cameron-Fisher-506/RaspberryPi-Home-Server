@@ -1,5 +1,7 @@
 package za.co.raspberrypi.common.presentation.server
 
+import common.data.local.dataSource.UserManagementLocalDataSource
+import common.data.local.database.DatabaseFactory
 import common.presentation.plugins.configureResources
 import common.presentation.plugins.configureSerialization
 import common.presentation.plugins.configureStatusPages
@@ -13,6 +15,9 @@ fun main(args: Array<String>) {
 }
 
 fun Application.module() {
+    val databaseFactory = DatabaseFactory()
+    val userManagementLocalDataSource = UserManagementLocalDataSource(databaseFactory.database)
+
     configureResources()
     configureSerialization()
     configureStatusPages()
