@@ -13,10 +13,12 @@ fun main(args: Array<String>) {
 }
 
 fun Application.module() {
+    val databaseFactory = DatabaseFactory()
+
     configureResources()
     configureSerialization()
     configureStatusPages()
 
     configureFileManagementRouting()
-    configureFolderManagementRouting()
+    configureFolderManagementRouting(databaseFactory.database)
 }

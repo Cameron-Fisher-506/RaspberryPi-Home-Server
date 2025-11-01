@@ -6,21 +6,23 @@ import features.folderManagement.presentation.model.FolderDto
 object FolderMapper {
     fun mapToFolder(folderDto: FolderDto): Folder {
         return Folder(
-            id = folderDto.id,
+            folderIdentifier = folderDto.folderIdentifier,
             name = folderDto.name,
-            itemType = folderDto.itemType,
-            parentId = folderDto.parentId,
-            createAt = folderDto.createAt
+            userIdentifier = folderDto.userIdentifier,
+            parentIdentifier = folderDto.parentIdentifier,
+            createAt = folderDto.createAt,
+            updatedAt = folderDto.updatedAt
         )
     }
 
     fun mapToFolderDto(folder: Folder): FolderDto {
         return FolderDto(
-            id = folder.id,
+            folderIdentifier = folder.folderIdentifier,
             name = folder.name,
-            itemType = folder.itemType,
-            parentId = folder.parentId,
-            createAt = folder.createAt
+            userIdentifier = folder.userIdentifier,
+            parentIdentifier = folder.parentIdentifier,
+            createAt = folder.createAt,
+            updatedAt = folder.updatedAt
         )
     }
 
