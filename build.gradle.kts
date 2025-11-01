@@ -22,4 +22,9 @@ dependencies {
     implementation(libs.ktor.serialization.kotlinx.json)
     implementation(libs.ktor.server.resources)
     implementation(libs.ktor.server.status.pages)
+
+    implementation(libs.hikaricp)
+    implementation(libs.postgresql)
+    implementation(libs.exposed.core)
+    implementation(libs.exposed.jdbc)
 }
