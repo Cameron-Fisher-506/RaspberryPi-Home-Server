@@ -1,24 +1,28 @@
 package features.folderManagement.data.local.mappers
 
-import features.folderManagement.data.local.model.FolderEntity
+import features.folderManagement.data.local.model.entity.FolderEntity
 import features.folderManagement.domain.model.Folder
 
 object FolderMapper {
     fun mapToFolder(folderEntity: FolderEntity): Folder {
         return Folder(
-            id = folderEntity.id,
+            folderIdentifier = folderEntity.folderIdentifier,
             name = folderEntity.name,
-            parentId = folderEntity.parentId,
-            createAt = folderEntity.createAt
+            userIdentifier = folderEntity.userIdentifier,
+            parentIdentifier = folderEntity.parentIdentifier,
+            createAt = folderEntity.createAt,
+            updatedAt = folderEntity.updatedAt
         )
     }
 
     fun mapToFolderEntity(folder: Folder): FolderEntity {
         return FolderEntity(
-            id = folder.id,
+            folderIdentifier = folder.folderIdentifier,
             name = folder.name,
-            parentId = folder.parentId,
-            createAt = folder.createAt
+            userIdentifier = folder.userIdentifier,
+            parentIdentifier = folder.parentIdentifier,
+            createAt = folder.createAt,
+            updatedAt = folder.updatedAt
         )
     }
 

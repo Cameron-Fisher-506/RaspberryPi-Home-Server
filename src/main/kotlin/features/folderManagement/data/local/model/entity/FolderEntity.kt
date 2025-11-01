@@ -1,10 +1,10 @@
-package features.folderManagement.domain.model
+package features.folderManagement.data.local.model.entity
 
-data class Folder(
+data class FolderEntity(
     val folderIdentifier: Int,
     val name: String,
     val userIdentifier: Int,
-    val parentIdentifier: Int? = null,
+    val parentIdentifier: Int?,
     val createAt: String,
     val updatedAt: String
 )

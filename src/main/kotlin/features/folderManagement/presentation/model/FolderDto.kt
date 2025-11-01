@@ -5,9 +5,10 @@ import java.util.Date
 
 @Serializable
 data class FolderDto(
-    val id: Int,
+    val folderIdentifier: Int,
     val name: String,
-    val parentId: Int? = null,
+    val userIdentifier: Int,
+    val parentIdentifier: Int? = null,
     val createAt: String,
-    val itemType: String = "folder"
+    val updatedAt: String
 )
